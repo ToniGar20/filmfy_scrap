@@ -64,13 +64,13 @@ class SensacineItemsSpider(scrapy.Spider):
 
         movie_title_without_special = re.sub('[^a-zA-Z0-9 \n\.]', '', movie_title)
         movie_title_normalized = lower(re.sub(' ', '-', movie_title_without_special))
-        movie_image = '/movie_images/' + movie_title_normalized + '.jpg'
+        movie_image = '/movies_images/' + movie_title_normalized + '.jpg'
 
         # Images: getting data of image uploaded at sensacine
         image = data['image']['url']
         # Saving images from url to folder
         imgURL = image
-        urllib.request.urlretrieve(imgURL, '/home/tgarcia/dev-projects/filmfy_scrap/filmfy_scrap/resources/movie_images/' + movie_title_normalized + '.jpg')
+        urllib.request.urlretrieve(imgURL, 'C:/Users/Toni/dev/filmfy_scrap/filmfy_scrap/resources/movies_images/' + movie_title_normalized + '.jpg')
         # Setting local variable for DB
 
         movie_trailer = data['trailer']['url']
