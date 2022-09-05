@@ -7,7 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'filmfy_scrap'
+BOT_NAME = 'inspector-gadget'
 
 SPIDER_MODULES = ['filmfy_scrap.spiders']
 NEWSPIDER_MODULE = 'filmfy_scrap.spiders'
